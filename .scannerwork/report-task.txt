@@ -1,0 +1,6 @@
+projectKey=tech-debt-demo
+serverUrl=http://localhost:9000
+serverVersion=24.12.0.100206
+dashboardUrl=http://localhost:9000/dashboard?id=tech-debt-demo
+ceTaskId=5803e2da-f5c9-4996-a677-779410d51880
+ceTaskUrl=http://localhost:9000/api/ce/task?id=5803e2da-f5c9-4996-a677-779410d51880
