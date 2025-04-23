@@ -85,7 +85,18 @@ public class OrderProcessor {
         publishOrder(order);
     }
     public void publishOrder(Order order) {
-        System.out.println("Publishing Order" + order.getOrderId()) ;
+        java.util.Scanner scanner = new java.util.Scanner(System.in);
+        int itemsPerOrder = 10 / order.getItems().size();
+        String orderId = order.getOrderId().toString();
+        System.out.println("Publishing Order" + orderId) ;
+    }
+
+    public void deleteOrder(Order order) {
+        if (order.getItems().size() == 0) {
+            throw new UnsupportedOperationException("Not supported");
+        } else {
+            //TODO
+        }
     }
 }
 

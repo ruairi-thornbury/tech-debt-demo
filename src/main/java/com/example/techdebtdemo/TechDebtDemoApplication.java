@@ -2,9 +2,16 @@ package com.example.techdebtdemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
 
 @SpringBootApplication
 public class TechDebtDemoApplication {
@@ -29,6 +36,10 @@ public class TechDebtDemoApplication {
             orderProcessor.reProcessOrder(order);
             orderProcessor.publishOrder(order);
         }
-    }
 
+        @DeleteMapping ("/order")
+        public void deleteOrder(@RequestBody Order order) {
+            orderProcessor.deleteOrder(order);
+        }
+    }
 }
